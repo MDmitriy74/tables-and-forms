@@ -8,9 +8,66 @@
 <body>
 <main>
     <h1>Найди себе друга!</h1>
+    <form action="/pets/orders" method="post">
+        <label>
+            Тип питомца:
+            <select name="petType">
+                <option value="dog" selected>Собака</option>
+                <option value="cat2">Кот</option>
+                <option value="tiger">Тигр</option>
+            </select>
+        </label><br><br>
 
-    <!--Форму размещай тут-->
+        <label>
+            Пол:
+            <input type="radio" name="gender" value="boy"> М
+        </label>
+        <label>
+            <input type="radio" name="gender" value="girl"> Ж
+        </label>
+        <label>
+            <input type="radio" name="gender" value="none" checked> Некто
+        </label><br><br>
 
+        <label>
+            Цвет глаз:
+            <input type="color" name="eyeColor" value="#ff0000">
+        </label><br><br>
+
+        <label>
+            Длина хвоста (от 7 до 120 см):
+            <input type="number" name="tailLength"  value="15" min="7" max="120" placeholder="15">
+        </label><br><br>
+
+        <label>
+            Кличка (от 3 до 50 символов):
+            <input type="text" name="name" value="Барсик" minlength="3" maxlength="50" required placeholder="Имя">
+        </label><br><br>
+
+        <label>
+            Дата рождения:
+            <input type="date" name="dateOfBirth" value="2024-01-01">
+        </label><br><br>
+
+        <label>
+            Ваша почта:
+            <input type="email" name="email" value="email@email.com" placeholder="email@mail.ru">
+        </label><br><br>
+
+        <label>
+            Телефон:
+            <input type="tel" name="phone" value="88005553535" placeholder="+7 (___) ___">
+        </label><br><br>
+
+        <label>
+            <input type="checkbox" name="rules" value="true" checked required>
+            Я согласен с правилами
+        </label><br><br>
+
+
+        <input type="submit" value="Отправить заказ">
+        <input type="reset" value="Сбросить форму">
+    </form>
 </main>
 </body>
 </html>
